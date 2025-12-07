@@ -1,0 +1,141 @@
+/* assets/style.css - VERSIÓN FINAL CORREGIDA (SIN ERRORES DE SINTAXIS) */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* 1. CUERPO Y FONDO */
+body {
+    font-family: 'Poppins', sans-serif !important;
+    background-color: #f4f7fc;
+    color: #333;
+    margin: 20px;
+}
+
+/* 2. OCULTAR SECCIONES TÉCNICAS (CORREGIDO) */
+/* Eliminamos el selector :contains que rompía la regla */
+#environment-header, 
+#environment, 
+.environment { 
+    display: none !important; 
+}
+
+/* 3. ENCABEZADO PERSONALIZADO */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #4361ee 0%, #3f37c9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 3px solid #4361ee;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* 4. TABLA DE RESULTADOS ESTILIZADA */
+#results-table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    border: none;
+    width: 100%;
+}
+
+#results-table thead tr {
+    background-color: #4361ee;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#results-table th {
+    padding: 15px;
+    border: none;
+    font-weight: 600;
+}
+
+#results-table tbody tr {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#results-table td {
+    padding: 15px;
+    border: none;
+    vertical-align: middle;
+}
+
+/* 5. ARREGLO DE IMÁGENES (Miniaturas) */
+td.extra {
+    width: 300px !important;
+    padding: 5px !important;
+    text-align: right;
+}
+
+/* Estilo de la foto */
+.extra img {
+    width: 250px !important;  
+    height: 140px !important;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    display: block;
+    margin-left: auto; 
+}
+
+/* Efecto Zoom al pasar el mouse */
+.extra img:hover {
+    transform: scale(2.8) translateX(-20%);
+    z-index: 1000;
+    position: relative;
+    border-color: #4361ee;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* 6. ARREGLO DE LOGS (Hacerlos pequeños y limpios) */
+.logwrapper {
+    max-height: 35px !important; 
+    overflow: hidden;
+    border: 1px solid #eee;
+    background: #f9f9f9;
+    margin-top: 5px;
+    opacity: 0.6; 
+    transition: all 0.3s;
+}
+
+.logwrapper:hover {
+    max-height: 200px !important;
+    opacity: 1;
+}
+
+.log {
+    background: transparent !important;
+    color: #888 !important;
+    padding: 5px !important;
+    font-size: 0.75rem;
+    border: none !important;
+}
+
+/* 7. BADGES (Etiquetas de estado) */
+.col-result {
+    text-align: center;
+    font-weight: bold;
+    width: 100px;
+}
+
+.passed .col-result {
+    background-color: #d1fae5;
+    color: #065f46;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.failed .col-result {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+/* LINKS */
+a { text-decoration: none; color: #4361ee; font-weight: bold; }

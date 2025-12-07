@@ -1,0 +1,24 @@
+# --- Python (Archivos compilados que no sirven en otros PC) ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- Entornos Virtuales ---
+env/
+venv/
+.venv/
+
+# --- Configuración de Editor (VS Code) ---
+.vscode/
+.idea/
+
+# --- Sistema Operativo (Basura de Windows) ---
+.DS_Store
+Thumbs.db
+
+# --- Selenium / Drivers ---
+drivers/
+geckodriver.log
+chromedriver.log
+

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #4361ee; /* Azul más "Tech" */
+    --secondary-color: #858796;
+    --card-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Para que el fondo no haga scroll innecesario */
+}
+
+/* --- CAMBIOS CLAVE AQUÍ --- */
+body.login-page {
+    /* Fondo 3D Abstracto de alta calidad */
+    background: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Efecto Glassmorphism más fuerte */
+.login-card {
+    background: rgba(255, 255, 255, 0.85); /* Más transparencia */
+    backdrop-filter: blur(12px); /* Efecto borroso detrás */
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    max-width: 400px;
+    width: 90%;
+    padding: 2.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.login-header h3 {
+    color: #2b2d42;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.form-control {
+    border-radius: 12px;
+    padding: 14px;
+    border: 1px solid #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.15);
+    border-color: var(--primary-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #304ffe;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(67, 97, 238, 0.3);
+}
